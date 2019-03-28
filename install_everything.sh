@@ -2,7 +2,7 @@
 
 # Install essential packages
 sudo apt update
-sudo apt install emacs zsh htop build-essential dkms linux-headers-$(uname -r) liquidprompt libxml2-dev libssl-dev libcurl4-openssl-dev libopenblas-dev r-base r-base-dev gdebi ubuntu-restricted-extras
+sudo apt install emacs zsh htop build-essential dkms linux-headers-$(uname -r) liquidprompt libxml2-dev libssl-dev libcurl4-openssl-dev libopenblas-dev r-base r-base-dev gdebi ubuntu-restricted-extras openjdk-8-jdk
 
 # Install Anaconda for Python development
 wget https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
