@@ -252,17 +252,18 @@ _lp_source_config()
     LP_COLOR_DISCHARGING_UNDER=${LP_COLOR_DISCHARGING_UNDER:-$RED}
     LP_COLOR_TIME=${LP_COLOR_TIME:-$BLUE}
 
-    LP_COLORMAP_0=${LP_COLORMAP_0:-""}
-    LP_COLORMAP_1=${LP_COLORMAP_1:-$GREEN}
-    LP_COLORMAP_2=${LP_COLORMAP_2:-$BOLD_GREEN}
-    LP_COLORMAP_3=${LP_COLORMAP_3:-$YELLOW}
-    LP_COLORMAP_4=${LP_COLORMAP_4:-$BOLD_YELLOW}
-    LP_COLORMAP_5=${LP_COLORMAP_5:-$RED}
-    LP_COLORMAP_6=${LP_COLORMAP_6:-$BOLD_RED}
-    LP_COLORMAP_7=${LP_COLORMAP_7:-$WARN_RED}
-    LP_COLORMAP_8=${LP_COLORMAP_8:-$CRIT_RED}
-    LP_COLORMAP_9=${LP_COLORMAP_9:-$DANGER_RED}
-
+    LP_COLORMAP=(
+        ""
+        "$GREEN"
+        "$BOLD_GREEN"
+        "$YELLOW"
+        "$BOLD_YELLOW"
+        "$RED"
+        "$BOLD_RED"
+        "$WARN_RED"
+        "$CRIT_RED"
+        "$DANGER_RED"
+    )
 
     # Default config file may be the XDG standard ~/.config/liquidpromptrc,
     # but heirloom dotfile has priority.
