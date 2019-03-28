@@ -108,8 +108,11 @@
 
 ;; use IPython as interpreter; use shell PATH for anaconda
 (exec-path-from-shell-copy-env "PATH")
-(elpy-use-ipython)
-(setq python-shell-interpreter "ipython" python-shell-interpreter-args "--simple-prompt --pprint")
+(setq python-shell-interpreter "jupyter"
+      python-shell-interpreter-args "console --simple-prompt"
+      python-shell-prompt-detect-failure-warning nil)
+(add-to-list 'python-shell-completion-native-disabled-interpreters
+             "jupyter")
 
 ;; jekyll-modes
 

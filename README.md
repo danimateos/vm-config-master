@@ -8,8 +8,10 @@ sudo apt install git
 
 ## Clone this repo
 
+```bash
 git clone https://github.com/danimateos/vm-config-master.git
 cd vm-config-master/
+```
 
 ## Install the required software
 
@@ -20,16 +22,14 @@ bash install_everything.sh
 During Anaconda install, say yes to everything except to installing Microsoft VSCode.
 
 
-## Link all config files
-
-TODO
-
 ## Optional but strongly recommended
 
-[Install Virtualbox Guest additions] to get shared clipborad and drag and drop between host and guest. This might need more config work to get working reliaby.
+[Install Virtualbox Guest additions] inside your guest OS to get shared clipborad and drag and drop between host and guest. This might need more config work to get working reliaby.
 
+[Install Virtualbox Extension Pack] in your host OS (your usual OS).
 
 [Install Virtualbox Guest additions]: https://www.tecmint.com/install-virtualbox-guest-additions-in-ubuntu/
+[Install Virtualbox Extension Pack]: TODO
 
 ## Get the data
 
