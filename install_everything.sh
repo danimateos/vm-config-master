@@ -9,6 +9,10 @@ wget https://repo.anaconda.com/archive/Anaconda3-2018.12-Linux-x86_64.sh
 bash Anaconda3-2018.12-Linux-x86_64.sh
 rm Anaconda3-2018.12-Linux-x86_64.sh
 
+# Install csvkit with conda
+source .bashrc
+conda install csvkit -y
+
 # Install Spark 2.4.0
 wget http://apache.rediris.es/spark/spark-2.4.0/spark-2.4.0-bin-hadoop2.7.tgz
 tar -xvzf spark-2.4.0-bin-hadoop2.7.tgz
