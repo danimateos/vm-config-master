@@ -106,7 +106,7 @@ PS3="%{[1;36m%}?# %{[0m%}"
 PS4="%{[0;36m%}(+) %{[0;32m%}%N%{[1;30m%}:%{[0;31m%}%i %{[1;33m%}$ %{[0m%}"
 
 # Prompt couleur droit
-RPS1='%{[30;1m%}%~ $COLOR_CONNECTIONS %{[0;36m%}%*%{[0m%}'
+RPS1='%{[30;1m%}%~ %{[0;36m%}%*%{[0m%}'
 RPS2='%{[0;33m%}[%_] %{[1;30m%}%T%{[0m%}'
 
 # Console linux, dans un screen ou un rxvt
