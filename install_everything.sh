@@ -54,6 +54,12 @@ sudo gdebi rstudio-1.4.1106-amd64.deb
 printf '\nexport QT_STYLE_OVERRIDE=gtk\n' | sudo tee -a ~/.profile
 rm rstudio-1.4.1106-amd64.deb
 
+# Dropbox
+wget 'https://www.dropbox.com/download?dl=packages/ubuntu/dropbox_2020.03.04_amd64.deb' -O dropbox.deb
+sudo dpkg -i dropbox.deb
+dropbox autostart y 
+rm dropbox.deb
+
 # Some flair :)
 wget https://www.itespresso.es/wp-content/uploads/2020/05/kschool-600x513.jpg
 mv kschool-600x513.jpg vm-config-master
