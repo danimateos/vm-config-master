@@ -3,6 +3,7 @@
 # Install essential packages
 sudo apt update
 sudo apt install build-essential \
+                 csvkit \
                  dkms \
                  emacs \
                  gdebi \
@@ -23,10 +24,7 @@ sudo apt install build-essential \
 wget https://repo.anaconda.com/archive/Anaconda3-2020.11-Linux-x86_64.sh
 bash Anaconda3-2020.11-Linux-x86_64.sh
 rm Anaconda3-2020.11-Linux-x86_64.sh
-
-# Install csvkit with conda
 source .bashrc
-conda install csvkit -y
 
 # Install Spark 3.1.1
 wget http://apache.rediris.es/spark/spark-3.1.1/spark-3.1.1-bin-hadoop3.2.tgz
