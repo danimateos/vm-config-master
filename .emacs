@@ -1,4 +1,3 @@
-
 (tool-bar-mode -1)
 
 ;; packages
@@ -14,17 +13,8 @@
     (package-refresh-contents))
   
   (defvar myPackages
-    '(ensime
-      ido
-      smex
-      undo-tree
-      better-defaults
-      elpy
-      flycheck
-      yaml-mode
-      markdown-mode
-      jekyll-modes
-      exec-path-from-shell))
+    '(ido
+      undo-tree))
   
   (mapc #'(lambda (package)
 	    (unless (package-installed-p package)
@@ -33,25 +23,10 @@
 
   )
 
-(require 'ensime)
-(setq ensime-startup-notification nil)
-(setq ensime-startup-snapshot-notification nil)
-;; (add-hook 'scala-mode-hook 'ensime-scala-mode-hook)
-;; If necessary, make sure "sbt" and "scala" are in the PATH environment
-;; (setenv "PATH" (concat "/path/to/sbt/bin:" (getenv "PATH")))
-;; (setenv "PATH" (concat "/path/to/scala/bin:" (getenv "PATH")))
-;; You can also customize `ensime-inf-get-project-root' and `ensime-inf-get-repl-cmd-line'
 
 ;; interactively do things (ido)
 (require 'ido)
 (ido-mode t)
-
-;; smex: ido for commands
-(require 'smex)
-(global-set-key (kbd "M-x") 'smex)
-(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-;; This is your old M-x.
-(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
 
 ;; undo-tree
 (require 'undo-tree)
@@ -95,26 +70,3 @@
 ;; Show column number
 (setq column-number-mode t)
 
-;; Better default behavior for emacs
-(require 'better-defaults)
-
-;; Python stuff: https://realpython.com/blog/python/emacs-the-best-python-editor/
-(elpy-enable)
-
-;; Better syntax checking for Python
-(when (require 'flycheck nil t)
-  (setq elpy-modules (delq 'elpy-module-flymake elpy-modules))
-  (add-hook 'elpy-mode-hook 'flycheck-mode))
-
-;; use IPython as interpreter; use shell PATH for anaconda
-(exec-path-from-shell-copy-env "PATH")
-(setq python-shell-interpreter "jupyter"
-      python-shell-interpreter-args "console --simple-prompt"
-      python-shell-prompt-detect-failure-warning nil)
-(add-to-list 'python-shell-completion-native-disabled-interpreters
-             "jupyter")
-
-;; jekyll-modes
-
-(add-to-list 'auto-mode-alist '("\\.md$" . jekyll-markdown-mode))
-(add-to-list 'auto-mode-alist '("\\.html" . jekyll-html-mode))
